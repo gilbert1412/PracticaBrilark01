@@ -26,7 +26,7 @@ class CreateBooksTable extends Migration
             /* relaciones*/
             $table->foreign("id_editorial")
                 ->references("id")
-                ->on("editorial")
+                ->on("editorials")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
         });

@@ -29,7 +29,7 @@
                                                 <!-- Dropdown list-->
                                                 <li>
                                                     <a href="#" class="media">
-                                                        <div class="media-left"> <img src="img/av2.png" alt="Profile Picture" class="img-circle img-sm"> </div>
+                                                        <div class="media-left"> <img src="{{ asset('img/av2.png') }}" alt="Profile Picture" class="img-circle img-sm"> </div>
                                                         <div class="media-body">
                                                             <div class="text-nowrap">Andy sent you a message</div>
                                                             <small class="text-muted">15 minutes ago</small> 
@@ -187,7 +187,7 @@
                             <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                             <li id="dropdown-user" class="dropdown">
                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
-                                    <span class="pull-right"> <img class="img-circle img-user media-object" src="img/av1.png" alt="Profile Picture"> </span>
+                                    <span class="pull-right"> <img class="img-circle img-user media-object" src="{{ asset('img/av1.png') }}" alt="Profile Picture"> </span>
                                     <div class="username hidden-xs">John Doe</div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right with-arrow">
