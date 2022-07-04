@@ -15,7 +15,6 @@ class CreateEditorialsTable extends Migration
     {
         Schema::create('editorials', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_editorial');
             $table->string('name')->nullable();
             $table->string('owner')->nullable();
             $table->string('direction')->nullable();

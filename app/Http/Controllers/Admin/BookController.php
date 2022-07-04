@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\BookRequest;
 use App\Models\Admin\Book;
+use App\Models\Admin\Editorial;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -14,11 +15,12 @@ class BookController extends Controller
         return view('admin.book.index',compact('books'));
     }
     public function create(){
-        return view('admin.book.create');
+        $editorial=Editorial::all();
+        return view('admin.book.create',compact('editorial'));
     }
     public function store(BookRequest $request){
         Book::create($request->all());
-        return redirect()->route('books.index')->with('success','Libro Regitrado correctamente');
+        return redirect()->route('books.index')->with('success','Libro agregado correctamente');
     }
     public function edit(Book $book){
         return view('admin.book.edit',compact('book'));

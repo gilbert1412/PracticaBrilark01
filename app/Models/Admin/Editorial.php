@@ -9,4 +9,7 @@ class Editorial extends Model
 {
     use HasFactory;
     protected $guarded=['id','create_at','update_at'];
+    public function books(){
+        return $this->hasMany(Book::class);
+    }
 }

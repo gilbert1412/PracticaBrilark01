@@ -13,7 +13,7 @@ class BookRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,7 +26,7 @@ class BookRequest extends FormRequest
         return [
             'name'=>'required',
             'author'=>'required',
-            'editorial'=>'required',
+            'id_editorial'=>'required',
             'yearPublication'=>'required',
             'status'=>'required'
         ];
