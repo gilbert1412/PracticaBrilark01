@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/books', BookController::class)->names('books');
+Route::resource('/editorial', BookController::class)->names('editorials');
