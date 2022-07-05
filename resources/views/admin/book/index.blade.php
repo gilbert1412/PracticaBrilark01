@@ -27,7 +27,7 @@
                             @include('admin.book.alert')
                             <div class="gamma-container gamma-loading " id="gamma-container">
                                 <!---->
-                                <table  style="width:100%" id="demo-dt-basic" class="table table-striped table-bordered">
+                                <table  id="table_id" class="display" style="width:100%" >
 
                                     <thead>
                                         <tr>
@@ -91,8 +91,9 @@
     </div>
 </div>
 <script> 
+
     $(document).ready(function () {
-        $('#example').DataTable(
+        $('#table_id').DataTable(
             {
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json'

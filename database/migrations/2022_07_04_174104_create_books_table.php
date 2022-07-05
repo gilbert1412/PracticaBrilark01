@@ -15,20 +15,17 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_editorial');
             $table->string('name')->nullable();
             $table->string('author')->nullable();
-            //$table->string('ideditorial')->nullable();
             $table->date('yearPublication')->nullable();
             $table->enum('status',[1,2])->default(1);
-            $table->timestamps();
-
-            /* relaciones*/
-            $table->foreign("id_editorial")
+            $table->unsignedBigInteger('editorial_id');
+            $table->foreign("editorial_id")
                 ->references("id")
                 ->on("editorials")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
+            $table->timestamps();
         });
     }
 
