@@ -11,8 +11,7 @@ use Illuminate\Http\Request;
 class BookController extends Controller
 {
     public function index(){
-        $book=Book::all()->first();
-        dd($book->editorial());
+        $books=Book::all();
         return view('admin.book.index',compact('books'));
     }
     public function create(){
@@ -24,7 +23,8 @@ class BookController extends Controller
         return redirect()->route('books.index')->with('success','Libro agregado correctamente');
     }
     public function edit(Book $book){
-        return view('admin.book.edit',compact('book'));
+        $editorials=Editorial::all();
+        return view('admin.book.edit',compact('book','editorials'));
     }
     public function update(BookRequest $request,Book $book){
         //dd($request->all());

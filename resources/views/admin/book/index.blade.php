@@ -27,7 +27,7 @@
                             @include('admin.book.alert')
                             <div class="gamma-container gamma-loading " id="gamma-container">
                                 <!---->
-                                <table  id="table_id" class="display" style="width:100%" >
+                                <table  id="table_id" class="table display table-striped table-hover table-responsive" style="width:100%" >
 
                                     <thead>
                                         <tr>
@@ -44,7 +44,7 @@
                                                 <tr>
                                                     <td>{{ $book->name }}</td>
                                                     <td>{{ $book->author }}</td>
-                                                    <td>{{ $book->id_editorial }}</td>
+                                                    <td>{{ $book->editorial->name }}</td>
                                                     <td>{{ $book->yearPublication }}</td>
                                                     <td>
                                                         @if ($book->status==1)

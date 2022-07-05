@@ -26,7 +26,7 @@ class BookRequest extends FormRequest
         return [
             'name'=>'required',
             'author'=>'required',
-            'id_editorial'=>'required',
+            'editorial_id'=>'required',
             'yearPublication'=>'required',
             'status'=>'required'
         ];
