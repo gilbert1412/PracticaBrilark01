@@ -44,7 +44,7 @@
                                                 <tr>
                                                     <td>{{ $book->name }}</td>
                                                     <td>{{ $book->author }}</td>
-                                                    <td>{{ $book->id_editorial }}</td>
+                                                    <td>{{ $book->editorial->name }}</td>
                                                     <td>{{ $book->yearPublication }}</td>
                                                     <td>
                                                         @if ($book->status==1)

@@ -42,12 +42,12 @@
                                             @enderror
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <select name="id_editorial" class="form-control">
+                                                <select name="editorial_id" class="form-control">
                                                     @foreach ($editorial as $element)
                                                         <option value="{{ $element->id }}">{{ $element->name }}</option>
                                                     @endforeach
                                                 </select>
-                                                @error('id_editorial')
+                                                @error('editorial_id')
                                                 <span class="text-danger form-label fw-bold">{{ $message }}</span>
                                             @enderror
                                             </div>

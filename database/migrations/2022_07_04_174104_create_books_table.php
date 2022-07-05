@@ -15,7 +15,7 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_editorial');
+            $table->unsignedBigInteger('editorial_id');
             $table->string('name')->nullable();
             $table->string('author')->nullable();
             //$table->string('ideditorial')->nullable();
@@ -24,7 +24,7 @@ class CreateBooksTable extends Migration
             $table->timestamps();
 
             /* relaciones*/
-            $table->foreign("id_editorial")
+            $table->foreign("editorial_id")
                 ->references("id")
                 ->on("editorials")
                 ->onDelete("cascade")
