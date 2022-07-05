@@ -10,6 +10,10 @@
 <!-- END OF CONTAINER -->
 <!--JAVASCRIPT-->
 <!--=================================================-->
+<script src="{{ asset('js/demo/tables-footable.js') }}"></script>
+<script src="{{ asset('plugins/bootstrap-select/bootstrap-select.min.js') }}"></script>
+        <!--FooTable [ OPTIONAL ]-->
+        <script src="{{ asset('plugins/fooTable/dist/footable.all.min.js') }}"></script>
 <!--jQuery [ REQUIRED ]-->
 <script src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
 <!--BootstrapJS [ RECOMMENDED ]-->
