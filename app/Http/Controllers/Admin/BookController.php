@@ -11,7 +11,8 @@ use Illuminate\Http\Request;
 class BookController extends Controller
 {
     public function index(){
-        $books=Book::all();
+        $book=Book::all()->first();
+        dd($book->editorial());
         return view('admin.book.index',compact('books'));
     }
     public function create(){
