@@ -32,8 +32,8 @@
                                             <div class="col-md-12 form-group">
                                                 <input type="text" class="form-control" name="name" placeholder="Nombre del Libro"/>
                                                 @error('name')
-                                                <span class="text-danger form-label fw-bold">{{ $message }}</span>
-                                            @enderror
+                                                    <span class="text-danger form-label fw-bold">{{ $message }}</span>
+                                                @enderror
                                             </div>
                                             <div class="col-md-6 form-group">
                                                 <input type="text" class="form-control" name="author" placeholder="Autor"/>
@@ -52,7 +52,7 @@
                                             @enderror
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <input class="form-control" type="date" name="yearPublication" id="">
+                                                <input class="form-control" type="date" name="yearPublication">
                                                 @error('yearPublication')
                                                     <span class="text-danger form-label fw-bold">{{ $message }}</span>
                                                 @enderror

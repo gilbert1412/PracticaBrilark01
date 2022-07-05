@@ -39,7 +39,7 @@
                                 <ul class="collapse">
                                     <li><a href="{{ route('books.index') }}"><i class="fa fa-caret-right"></i> Visualizar </a></li>
                                     <li><a href="{{ route('books.create') }}"><i class="fa fa-caret-right"></i> Agregar </a></li>
-                                    <li><a href="ui-xeditable.html"><i class="fa fa-caret-right"></i> Editar </a></li>
+                                    <li><a href="ui-xeditable.html"><i class="fa fa-caret-right"></i> Buscar </a></li>
                                     
                                 </ul>
                             </li>
@@ -54,7 +54,7 @@
                                 <ul class="collapse">
                                     <li><a href="ui-animation.html"><i class="fa fa-caret-right"></i> Visualizar </a></li>
                                     <li><a href="ui-panel.html"><i class="fa fa-caret-right"></i> Agregar </a></li>
-                                    <li><a href="ui-xeditable.html"><i class="fa fa-caret-right"></i> Editar </a></li>
+                                    <li><a href="ui-xeditable.html"><i class="fa fa-caret-right"></i> Buscar </a></li>
                                     
                                 </ul>
                             </li>

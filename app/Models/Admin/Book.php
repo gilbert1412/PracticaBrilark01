@@ -11,7 +11,10 @@ class Book extends Model
     protected $guarded=['id','create_at','update_at'];
     public function editorial()
     {
-        return $this->belongsTo(Editorial::class);
+        return $this->belongsTo(Editorial::class,'editorial_id');
+        //return $this->hasMany(Editorial::class);
+        //$editorial=Editorial::where('id',$this->editorial_id)->first();
+        //return $editorial;
     }
 }
 

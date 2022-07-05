@@ -23,7 +23,8 @@ class BookController extends Controller
         return redirect()->route('books.index')->with('success','Libro agregado correctamente');
     }
     public function edit(Book $book){
-        return view('admin.book.edit',compact('book'));
+        $editorials=Editorial::all();
+        return view('admin.book.edit',compact('book','editorials'));
     }
     public function update(BookRequest $request,Book $book){
         //dd($request->all());
