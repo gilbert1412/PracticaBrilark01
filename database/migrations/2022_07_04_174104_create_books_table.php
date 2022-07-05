@@ -15,11 +15,20 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('editorial_id');
+
             $table->string('name')->nullable();
             $table->string('author')->nullable();
             $table->date('yearPublication')->nullable();
             $table->enum('status',[1,2])->default(1);
-            $table->unsignedBigInteger('editorial_id');
+
+           
+
+            /* relaciones*/
+
+           
+
             $table->foreign("editorial_id")
                 ->references("id")
                 ->on("editorials")
