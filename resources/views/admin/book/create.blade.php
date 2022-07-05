@@ -32,8 +32,8 @@
                                             <div class="col-md-12 form-group">
                                                 <input type="text" class="form-control" name="name" placeholder="Nombre del Libro"/>
                                                 @error('name')
-                                                <span class="text-danger form-label fw-bold">{{ $message }}</span>
-                                            @enderror
+                                                    <span class="text-danger form-label fw-bold">{{ $message }}</span>
+                                                @enderror
                                             </div>
                                             <div class="col-md-6 form-group">
                                                 <input type="text" class="form-control" name="author" placeholder="Autor"/>
@@ -42,17 +42,17 @@
                                             @enderror
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <select name="id_editorial" class="form-control">
+                                                <select name="editorial_id" class="form-control">
                                                     @foreach ($editorial as $element)
                                                         <option value="{{ $element->id }}">{{ $element->name }}</option>
                                                     @endforeach
                                                 </select>
-                                                @error('id_editorial')
+                                                @error('editorial_id')
                                                 <span class="text-danger form-label fw-bold">{{ $message }}</span>
                                             @enderror
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <input class="form-control" type="date" name="yearPublication" id="">
+                                                <input class="form-control" type="date" name="yearPublication">
                                                 @error('yearPublication')
                                                     <span class="text-danger form-label fw-bold">{{ $message }}</span>
                                                 @enderror
