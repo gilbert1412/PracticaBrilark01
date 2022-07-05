@@ -188,7 +188,12 @@
                             <li id="dropdown-user" class="dropdown">
                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
                                     <span class="pull-right"> <img class="img-circle img-user media-object" src="{{ asset('img/av1.png') }}" alt="Profile Picture"> </span>
-                                    <div class="username hidden-xs">John Doe</div>
+                                    <div class="username hidden-xs">
+                                        <div class="card">
+                                            {{auth()->user()->name}}
+                                            
+                                        </div>
+                                    </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right with-arrow">
                                     <!-- User dropdown menu -->
@@ -203,7 +208,7 @@
                                             <a href="#">  <i class="fa fa-gear fa-fw"></i> Settings </a>
                                         </li>
                                         <li>
-                                            <a href="#"> <i class="fa fa-sign-out fa-fw"></i> Logout </a>
+                                            <a href="../../"> <i class="fa fa-sign-out fa-fw"></i> Logout </a>
                                         </li>
                                     </ul>
                                 </div>
