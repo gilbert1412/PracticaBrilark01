@@ -19,23 +19,23 @@
           <div id="page-content">
             <div class="row">
                 <div class="col-lg-12">
-                   <div class="panel">
+                    <div class="panel">
                         <div class="panel-heading">
-                       <h3>Libros</h3>
-                      </div>
+                            <h3 class="panel-title">Libros</h3>
+                        </div>
                         <div class="panel-body">
                             @include('admin.book.alert')
-                            <div class="gamma-container gamma-loading " id="gamma-container">
+                            <!--div class="gamma-container gamma-loading " id="gamma-container"-->
                                 <!---->
                                 <div class="pad-btm form-inline">
                                     <div class="row">
                                         <div class="col-sm-6 text-xs-center">
                                             <div class="form-group">
-                                                <label class="control-label">Status</label>
+                                                <label class="control-label">Estado</label>
                                                 <select id="demo-foo-filter-status" class="form-control">
                                                     <option value="">Show all</option>
+                                                    <option value="no-publicado">No-Publicado</option>
                                                     <option value="publicado">Publicado</option>
-                                                    <option value="No publicado">No publicado</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -67,7 +67,7 @@
                                                     <td>{{ $book->yearPublication }}</td>
                                                     <td>
                                                         @if ($book->status==1)
-                                                            <span class="badge bg-danger">No publicado</span>
+                                                            <span class="badge bg-danger">No-publicado</span>
                                                         @else
                                                             <span class="badge bg-success">Publicado</span>
                                                         @endif
@@ -98,9 +98,17 @@
                                             <th>Estado</th>
                                             <th>Acciones</th>
                                         </tr>
+                                    
+                                        <tr>
+                                            <td colspan="6">
+                                                <div class="text-right">
+                                                    <ul class="pagination"></ul>
+                                                </div>
+                                            </td>
+                                        </tr>
                                     </tfoot>
                                 </table>
-                            </div>
+                            <!--/div-->
                         
                         </div>
                     </div>
@@ -109,7 +117,7 @@
         </div>
     </div>
 </div>
-<script> 
+<!--script> 
 
     $(document).ready(function () {
         $('#table_id').DataTable(
@@ -120,6 +128,6 @@
             }, 
         );
     });
-</script>
+</script-->
 @include('admin.template.sidebar')
 @include('admin.template.footer')
