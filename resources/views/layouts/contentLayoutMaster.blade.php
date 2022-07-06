@@ -339,7 +339,7 @@
                             <!--Category name-->
                             <li class="list-header">Navigation</li>
                             <!--Menu list item-->
-                            <li> <a href="index.html"> <i class="fa fa-home"></i> <span class="menu-title"> Dashboard </span> </a> </li>
+                            <li> <a href="{{ route('home') }}"> <i class="fa fa-home"></i> <span class="menu-title"> Dashboard </span> </a> </li>
                             <!--Category name-->
                             <li class="list-header">Components</li>
                             <!--Menu list item-->

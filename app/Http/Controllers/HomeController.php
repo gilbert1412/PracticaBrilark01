@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin\Book;
+use App\Models\Admin\Editorial;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $countBook=Book::where('status','=','1')->count();
+        $countEditorial=Editorial::where('status','=','1')->count();
+        return view('home',compact('countBook','countEditorial'));
     }
 }
