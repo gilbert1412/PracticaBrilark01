@@ -10,12 +10,11 @@
                 <div class="row">
                     <div class="col-sm-6 text-xs-center">
                         <div class="form-group">
-                            <label class="control-label">Status</label>
+                            <label class="control-label">Estado</label>
                             <select id="demo-foo-filter-status" class="form-control">
-                                <option value="">Show all</option>
-                                <option value="active">Active</option>
-                                <option value="disabled">Disabled</option>
-                                <option value="suspended">Suspended</option>
+                                <option value="">Todos</option>
+                                <option value="activo">Activo</option>
+                                <option value="inactivo">Inactivo</option>
                             </select>
                         </div>
                     </div>
@@ -26,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <table  id="demo-foo-filtering" class="table table-bordered table-hover toggle-circle" data-page-size="7">
+            <table id="demo-foo-filtering" class="table table-bordered table-hover toggle-circle" data-page-size="7">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -74,15 +73,13 @@
                         <th>Estado</th>
                         <th>Acciones</th>
                     </tr>
-                    <tfoot>
-                        <tr>
-                            <td colspan="6">
-                                <div class="text-right">
-                                    <ul class="pagination"></ul>
-                                </div>
-                            </td>
-                        </tr>
-                    </tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <div class="text-right">
+                                <ul class="pagination"></ul>
+                            </div>
+                        </td>
+                    </tr>
                 </tfoot>
             </table>
         </div>
@@ -90,17 +87,7 @@
 @endsection
 
 @section('scripComplemet')
-    <script> 
-        $(document).ready(function () {
-            $('#table_id').DataTable(
-                {
-                    language: {
-                        url: 'https://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json'
-                    }
-                }, 
-            );
-        });
-    </script>
+    
     <script src="{{ asset('plugins/fooTable/dist/footable.all.min.js') }}"></script>
     <script src="{{ asset('js/demo/tables-footable.js') }}"></script>
 @endsection
