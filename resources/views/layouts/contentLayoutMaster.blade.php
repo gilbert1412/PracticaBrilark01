@@ -251,7 +251,13 @@
                                             <a href="#">  <i class="fa fa-gear fa-fw"></i> Settings </a>
                                         </li>
                                         <li>
-                                            <a href="../../"> <i class="fa fa-sign-out fa-fw"></i> Logout </a>
+                                        
+                                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                                <i class="fa fa-sign-out fa-fw"></i>Logout
+                                            </a>    
+                                            <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                {{ csrf_field() }}
+                                            </form>
                                         </li>
                                     </ul>
                                 </div>
@@ -286,7 +292,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="panel">
-                                    <div class="panel-heading"><h3>Libros</h3></div>
+                                    <div class="panel-heading"><h3>  @yield('title') </h3></div>
                                     <div class="panel-body">
                                         <div class="gamma-container gamma-loading " id="gamma-container">
                                             @yield('contentPrincipal')
