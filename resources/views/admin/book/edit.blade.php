@@ -21,7 +21,7 @@
                 <div class="col-lg-12">
                    <div class="panel">
                         <div class="panel-heading">
-                       <h3>Edicion de Libros</h3>
+                       <h3>Edición de Libros</h3>
                       </div>
                         <div class="panel-body">
                             <div class="gamma-container gamma-loading" id="gamma-container">

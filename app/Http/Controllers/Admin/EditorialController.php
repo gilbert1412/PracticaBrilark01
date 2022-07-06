@@ -10,27 +10,27 @@ use Illuminate\Http\Request;
 class EditorialController extends Controller
 {
     public function index(){
-        $books=Editorial::all();
-        return view('admin.editorial.index',compact('books'));
+        $editorial=Editorial::all();
+        return view('admin.editorial.index',compact('editorial'));
     }
     public function create(){
         return view('admin.editorial.create');
     }
     public function store(EditorialRequest $request){
         Editorial::create($request->all());
-        return redirect()->route('editorial.index')->with('success','Editorial Regitrado correctamente');
+        return redirect()->route('editorials.index')->with('success','Editorial Regitrado correctamente');
     }
     public function edit(Editorial $editorial){
-        return view('admin.editorial.edit',compact('book'));
+        return view('admin.editorial.edit',compact('editorial'));
     }
     public function update(EditorialRequest $request,Editorial $editorial){
         //dd($request->all());
         $editorial=editorial::findOrfail($editorial->id);
         $editorial->update($request->all()); 
-        return redirect()->route('editorial.index')->with('update','Se actualizo el registro');
+        return redirect()->route('editorials.index')->with('update','Se actualizo el registro');
     }
     public function destroy(Editorial $editorial){
         $editorial->delete();
-        return redirect()->route('editorial.index')->with('destroy','Se elimino correctamente');
+        return redirect()->route('editorials.index')->with('destroy','Se elimino correctamente');
     }
 }
