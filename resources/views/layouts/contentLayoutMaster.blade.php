@@ -28,9 +28,10 @@
         <link href="{{ asset('css/demo/jquery-steps.min.css') }}" rel="stylesheet">
         <!--Summernote [ OPTIONAL ]-->
         <link href="{{ asset('plugins/summernote/summernote.min.css') }}" rel="stylesheet">
+        @yield('cssComplement')
         <!--Demo [ DEMONSTRATION ]-->
         <link href="{{ asset('css/demo/jasmine.css') }}" rel="stylesheet">
-        @yield('cssComplement')
+        
         <!--SCRIPT-->
         <!--=================================================-->
         <!--Page Load Progress Bar [ OPTIONAL ]-->
@@ -392,7 +393,7 @@
             </div>
             <!-- FOOTER -->
             <!--===================================================-->
-            <footer id="footer">
+            <footer id="">
                 <!-- Visible when footer positions are fixed -->
                 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                 <div class="show-fixed pull-right">
@@ -432,6 +433,7 @@
         <script src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
         <!--BootstrapJS [ RECOMMENDED ]-->
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        @yield('scripComplemet')
         <!--Fast Click [ OPTIONAL ]-->
         <script src="{{ asset('plugins/fast-click/fastclick.min.js') }}"></script>
         <!--Jquery Nano Scroller js [ REQUIRED ]-->
@@ -478,6 +480,6 @@
         <!--Form Wizard [ SAMPLE ]-->
         <script src="{{ asset('js/demo/form-wizard.js') }}"></script>
         <script src="{{ asset('js/demo/dashboard-v2.js') }}"></script>
-        @yield('scripComplemet')
+        
     </body>
 </html>
