@@ -1,15 +1,12 @@
+@extends('layouts.contentLayoutMaster') @section('title','Home')
+@section('cssComplement')
+@endsection
 
-@include('admin.template.header')
-@include('admin.template.navbar')
+@section('contentPrincipal')
+@endsection
 
+@section('scripComplemet')
 
-@extends('layouts.app')
-
-@section('content')
-
-
-
-@include('admin.template.sidebar')
-@include('admin.template.footer')
+@endsection
 
 
