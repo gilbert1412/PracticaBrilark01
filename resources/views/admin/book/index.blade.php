@@ -2,7 +2,6 @@
 @section('cssComplement')
 @endsection
 
-
 @section('contentPrincipal')
 @include('admin.book.alert')
 <table  id="table_id" class="table display table-striped table-hover table-responsive" style="width:100%" >
@@ -63,7 +62,6 @@
 
 @section('scripComplemet')
 <script> 
-
     $(document).ready(function () {
         $('#table_id').DataTable(
             {
@@ -75,5 +73,4 @@
     });
 </script>
 @endsection
-
 

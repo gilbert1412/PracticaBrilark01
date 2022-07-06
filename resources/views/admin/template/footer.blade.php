@@ -10,8 +10,13 @@
 <!-- END OF CONTAINER -->
 <!--JAVASCRIPT-->
 <!--=================================================-->
-<!--jQuery [ REQUIRED ]-->
 <script src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
+<script src="{{ asset('js/demo/tables-footable.js') }}"></script>
+<script src="{{ asset('plugins/bootstrap-select/bootstrap-select.min.js') }}"></script>
+        <!--FooTable [ OPTIONAL ]-->
+        <script src="{{ asset('plugins/fooTable/dist/footable.all.min.js') }}"></script>
+<!--jQuery [ REQUIRED ]-->
+
 <!--BootstrapJS [ RECOMMENDED ]-->
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!--Fast Click [ OPTIONAL ]-->

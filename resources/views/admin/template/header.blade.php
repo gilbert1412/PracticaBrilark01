@@ -30,6 +30,7 @@
         <link href="{{ asset('plugins/summernote/summernote.min.css') }}" rel="stylesheet">
         <!--Demo [ DEMONSTRATION ]-->
         <link href="{{ asset('css/demo/jasmine.css') }}" rel="stylesheet">
+        <link href="{{ asset('plugins/fooTable/css/footable.core.css') }}" rel="stylesheet">
         <!--SCRIPT-->
         <!--=================================================-->
         <!--Page Load Progress Bar [ OPTIONAL ]-->
