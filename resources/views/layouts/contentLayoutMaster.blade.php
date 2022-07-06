@@ -292,7 +292,11 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="panel">
+
                                     <div class="panel-heading"><h3>  @yield('title') </h3></div>
+
+                                 
+
                                     <div class="panel-body">
                                         <div class="gamma-container gamma-loading " id="gamma-container">
                                             @yield('contentPrincipal')
@@ -363,9 +367,9 @@
                                 </a>
                                 <!--Submenu-->
                                 <ul class="collapse">
-                                    <li><a href="ui-animation.html"><i class="fa fa-caret-right"></i> Visualizar </a></li>
-                                    <li><a href="ui-panel.html"><i class="fa fa-caret-right"></i> Agregar </a></li>
-                                    <li><a href="ui-xeditable.html"><i class="fa fa-caret-right"></i> Buscar </a></li>
+                                    <li><a href="{{ route('editorials.index') }}"><i class="fa fa-caret-right"></i> Visualizar </a></li>
+                                    <li><a href="{{ route('editorials.create') }}"><i class="fa fa-caret-right"></i> Agregar </a></li>
+                                    <li><a href=""><i class="fa fa-caret-right"></i> Buscar </a></li>
                                     
                                 </ul>
                             </li>
