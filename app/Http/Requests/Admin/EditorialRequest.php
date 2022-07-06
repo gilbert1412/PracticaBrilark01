@@ -24,7 +24,10 @@ class EditorialRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'=>'required',
+            'owner'=>'required',
+            'direction'=>'required',
+            'status'=>'required'
         ];
     }
 }
