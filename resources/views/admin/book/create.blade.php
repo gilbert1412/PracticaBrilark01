@@ -1,6 +1,7 @@
 @extends('../layouts.contentLayoutMaster') @section('title','Editorial')
 @section('cssComplement')
-    <link/>
+    <link href="{{ asset('plugins/dropzone/dropzone.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet">
 @endsection
 
 @section('contentPrincipal')
@@ -21,7 +22,7 @@
                             @enderror
                         </div>
                         <div class="col-md-6 form-group">
-                            <select name="author_id[]" class="form-select form-control" multiple aria-label="multiple select">
+                            <select name="author_id[]" class="demo-cs-multiselect" data-placeholder="Choose a Country..." multiple tabindex="4">
                                 @foreach ($authors as $element)
                                     <option value="{{ $element->id }}">{{ $element->nickName }}</option>
                                 @endforeach

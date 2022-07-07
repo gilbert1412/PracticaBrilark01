@@ -42,7 +42,11 @@
                         @foreach ($books as $book)
                             <tr>
                                 <td>{{ $book->name }}</td>
-                                <td>{{ $book->author }}</td>
+                                <td>
+                                    @foreach ($book->authors as $item)
+                                        {{ $item->name }}<br>
+                                    @endforeach
+                                </td>
                                 <td>{{ $book->editorial->name }}</td>
                                 <td>{{ $book->yearPublication }}</td>
                                 <td>

@@ -17,9 +17,9 @@ class BookController extends Controller
 }
     public function index(){
         
-        $books=Book::all();
-        //dd($books->authors);
-       // $roles=Book::find(7)->authors()->orderBy('name')->get();
+        $books=Book::with(['authors'])->get();
+        //dd($books);
+        //$authors=Book::find(24)->authors()->orderBy('name')->get();
         //dd($roles);
         return view('admin.book.index',compact('books'));
     }
