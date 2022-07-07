@@ -10,17 +10,17 @@
                 <div class="row">
                     <div class="col-sm-6 text-xs-center">
                         <div class="form-group">
-                            <label class="control-label">Estado</label>
+                            <label class="control-label">Status</label>
                             <select id="demo-foo-filter-status" class="form-control">
-                                <option value="">Todos</option>
+                                <option value="">Show all</option>
                                 <option value="activo">Activo</option>
-                                <option value="inactivo">Inactivo</option>
+                                <option value="no activo">No activo</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-6 text-xs-center text-right">
                         <div class="form-group">
-                            <input id="demo-foo-search" type="text" placeholder="Search" class="form-control" autocomplete="off">
+                            <input id="demo-foo-search" type="text" placeholder="Buscar" class="form-control" autocomplete="off">
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                                     @endif
                                 </td>
                                 <td >
-                                    <div class="d-flex align-items-center col-actions" >
+                                    <div class="align-items-center col-actions" >
                                         <a href="{{route('editorials.edit',$editorial->id)}}" class="btn btn-xs btn-warning text-primary mx-1 shadow" title="Edit">
                                             <i class="fa fa-lg fa-fw fa-pencil"></i>
                                         </a>

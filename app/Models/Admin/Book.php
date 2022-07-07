@@ -16,5 +16,9 @@ class Book extends Model
         //$editorial=Editorial::where('id',$this->editorial_id)->first();
         //return $editorial;
     }
+    public function authors()
+    {
+        return $this->belongsToMany(Author::class);
+    }
 }
 

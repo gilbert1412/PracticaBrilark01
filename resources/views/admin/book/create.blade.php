@@ -36,11 +36,16 @@
                                                 @enderror
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <input type="text" class="form-control" name="author" placeholder="Autor"/>
-                                                @error('author')
+                                                <select name="author_id" class="form-control">
+                                                    @foreach ($authors as $element)
+                                                        <option value="{{ $element->id }}">{{ $element->nickName }}</option>
+                                                    @endforeach
+                                                </select>
+                                                @error('author_id')
                                                 <span class="text-danger form-label fw-bold">{{ $message }}</span>
                                             @enderror
                                             </div>
+                                            
                                             <div class="col-md-6 form-group">
                                                 <select name="editorial_id" class="form-control">
                                                     @foreach ($editorial as $element)

@@ -35,7 +35,7 @@
 
                          </a>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-2"> <i class="fa fa-caret-up fa-3x text-success"></i> </div>
+                    <div class="col-md-3 col-sm-3 col-xs-2"> <i class="fa fa-briefcase fa-3x text-success"></i> </div>
                 </div>
                 <div class="progress progress-striped progress-sm">
                     <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar progress-bar-success"> <span class="sr-only">60% Complete</span> </div>

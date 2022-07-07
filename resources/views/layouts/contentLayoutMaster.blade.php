@@ -28,7 +28,6 @@
         <link href="{{ asset('css/demo/jquery-steps.min.css') }}" rel="stylesheet">
         <!--Summernote [ OPTIONAL ]-->
         <link href="{{ asset('plugins/summernote/summernote.min.css') }}" rel="stylesheet">
-        @yield('cssComplement')
         <!--Demo [ DEMONSTRATION ]-->
         <link href="{{ asset('css/demo/jasmine.css') }}" rel="stylesheet">
         
@@ -355,7 +354,7 @@
                                 <ul class="collapse">
                                     <li><a href="{{ route('books.index') }}"><i class="fa fa-caret-right"></i> Visualizar </a></li>
                                     <li><a href="{{ route('books.create') }}"><i class="fa fa-caret-right"></i> Agregar </a></li>
-                                    <li><a href="ui-xeditable.html"><i class="fa fa-caret-right"></i> Buscar </a></li>
+                                    
                                     
                                 </ul>
                             </li>
@@ -370,7 +369,7 @@
                                 <ul class="collapse">
                                     <li><a href="{{ route('editorials.index') }}"><i class="fa fa-caret-right"></i> Visualizar </a></li>
                                     <li><a href="{{ route('editorials.create') }}"><i class="fa fa-caret-right"></i> Agregar </a></li>
-                                    <li><a href=""><i class="fa fa-caret-right"></i> Buscar </a></li>
+                                    
                                     
                                 </ul>
                             </li>

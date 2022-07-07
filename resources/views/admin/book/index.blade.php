@@ -10,18 +10,11 @@
             <div class="pad-btm form-inline">
                 <div class="row">
                     <div class="col-sm-6 text-xs-center">
-                        <div class="form-group">
-                            <label class="control-label">Estado</label>
-                            <select id="demo-foo-filter-status" class="form-control">
-                                <option value="">Todos</option>
-                                <option value="activo">Activo</option>
-                                <option value="inactivo">Inactivo</option>
-                            </select>
-                        </div>
+                        
                     </div>
                     <div class="col-sm-6 text-xs-center text-right">
                         <div class="form-group">
-                            <input id="demo-foo-search" type="text" placeholder="Search" class="form-control" autocomplete="off">
+                            <input id="demo-foo-search" type="text" placeholder="Buscar" class="form-control" autocomplete="off">
                         </div>
                     </div>
                 </div>
