@@ -22,7 +22,11 @@
                         @enderror
                         </div>
                         <div class="col-md-6 form-group">
-                            <input type="text" class="form-control" name="author" value="{{ $book->author }}" placeholder="Autor"/>
+                            <select name="author_id[]" class="demo-cs-multiselect" data-placeholder="Choose a Country..." multiple tabindex="4">
+                                @foreach ($authors as $element)
+                                    <option value="{{ $element->id }}">{{ $element->name }}</option>
+                                @endforeach
+                            </select>
                             @error('author')
                             <span class="text-danger form-label fw-bold">{{ $message }}</span>
                         @enderror
