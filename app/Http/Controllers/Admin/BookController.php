@@ -25,7 +25,6 @@ class BookController extends Controller
         return view('admin.book.create',compact('editorial','authors'));
     }
     public function store(BookRequest $request){
-        dd($request->all());
         $book= Book::create($request->all());
         $book->authors()->attach($request->authors);
         

@@ -4,13 +4,20 @@
 @endsection
 
 @section('contentPrincipal')
-    @include('admin.book.alert')
+    @include('admin.template.alert')
     <div class="panel">
         <div class="panel-body">
             <div class="pad-btm form-inline">
                 <div class="row">
                     <div class="col-sm-6 text-xs-center">
-                        
+                        <div class="form-group">
+                            <label class="control-label">Status</label>
+                            <select id="demo-foo-filter-status" class="form-control">
+                                <option value="">Show all</option>
+                                <option value="activo">Activo</option>
+                                <option value="no activo">No activo</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="col-sm-6 text-xs-center text-right">
                         <div class="form-group">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\EditorialController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/books', BookController::class)->names('books');
 Route::resource('/editorial', EditorialController::class)->names('editorials');
+Route::resource('/author', AuthorController::class)->names('authors');
+
 
 
 

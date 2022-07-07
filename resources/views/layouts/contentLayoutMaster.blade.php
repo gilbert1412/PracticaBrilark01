@@ -374,7 +374,22 @@
                                 </ul>
                             </li>
                             <!--Menu list item-->
-                            
+                            <!--Menu list item-->
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user fa-fw fa-lg"></i>
+                                <span class="menu-title">Autores</span>
+                                <i class="arrow"></i>
+                                </a>
+                                <!--Submenu-->
+                                <ul class="collapse">
+                                    <li><a href="{{ route('authors.index') }}"><i class="fa fa-caret-right"></i> Visualizar </a></li>
+                                    <li><a href="{{ route('authors.create') }}"><i class="fa fa-caret-right"></i> Agregar </a></li>
+                                    
+                                    
+                                </ul>
+                            </li>
+                            <!--Menu list item-->
                                 </ul>
                             </div>
                         </div>

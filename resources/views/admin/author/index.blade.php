@@ -1,4 +1,4 @@
-@extends('../layouts.contentLayoutMaster') @section('title','Editoriales')
+@extends('../layouts.contentLayoutMaster') @section('title','Autores')
 @section('cssComplement')
 @endsection
     <link href="{{ asset('plugins/fooTable/css/footable.core.css') }}" rel="stylesheet">
@@ -29,31 +29,25 @@
                 <thead>
                     <tr>
                         <th>Nombre</th>
-                        <th>Propietario</th>
-                        <th>Dirección</th>
-                        <th>Estado</th>
+                        <th>Nickname</th>
+                        <th>Nacionaldad</th>
+                        <th>Fecha de Nacimiento</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tBody>
-                        @foreach ($editorial as $editorial)
+                        @foreach ($authors as $author)
                             <tr>
-                                <td>{{ $editorial->name }}</td>
-                                <td>{{ $editorial->owner }}</td>
-                                <td>{{ $editorial->direction }}</td>
-                                <td>
-                                    @if ($editorial->status==1)
-                                        <span class="badge bg-success">Activo</span>
-                                    @else
-                                        <span class="badge bg-warning">Inactivo</span>
-                                    @endif
-                                </td>
+                                <td>{{ $author->name }}</td>
+                                <td>{{ $author->nickName }}</td>
+                                <td>{{ $author->nationality }}</td>
+                                <td>{{ $author->yearBirth }}</td>
                                 <td >
                                     <div class="align-items-center col-actions" >
-                                        <a href="{{route('editorials.edit',$editorial->id)}}" class="btn btn-xs btn-warning text-primary mx-1 shadow" title="Edit">
+                                        <a href="{{route('authors.edit',$author->id)}}" class="btn btn-xs btn-warning text-primary mx-1 shadow" title="Edit">
                                             <i class="fa fa-lg fa-fw fa-pencil"></i>
                                         </a>
-                                        <form action="{{route('editorials.destroy', $editorial->id)}}" method="POST">
+                                        <form action="{{route('authors.destroy', $author->id)}}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-xs btn-danger text-primary mx-1 shadow bg-danger">
@@ -68,9 +62,9 @@
                 <tfoot>
                     <tr>
                         <th>Nombre</th>
-                        <th>Propietario</th>
-                        <th>Dirección</th>
-                        <th>Estado</th>
+                        <th>Nickname</th>
+                        <th>Nacionaldad</th>
+                        <th>Fecha de Nacimiento</th>
                         <th>Acciones</th>
                     </tr>
                     <tr>
