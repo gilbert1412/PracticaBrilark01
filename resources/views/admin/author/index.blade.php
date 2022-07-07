@@ -1,8 +1,7 @@
-@extends('../layouts.contentLayoutMaster') @section('title','Libros')
+@extends('../layouts.contentLayoutMaster') @section('title','Autores')
 @section('cssComplement')
-    <link href="{{ asset('plugins/fooTable/css/footable.core.css') }}" rel="stylesheet">
 @endsection
-
+    <link href="{{ asset('plugins/fooTable/css/footable.core.css') }}" rel="stylesheet">
 @section('contentPrincipal')
     @include('admin.template.alert')
     <div class="panel">
@@ -26,42 +25,29 @@
                     </div>
                 </div>
             </div>
-            <table  id="demo-foo-filtering" class="table table-bordered table-hover toggle-circle" data-page-size="7">
-
+            <table id="demo-foo-filtering" class="table table-bordered table-hover toggle-circle" data-page-size="7">
                 <thead>
                     <tr>
                         <th>Nombre</th>
-                        <th>Autor</th>
-                        <th>Editorial</th>
-                        <th>Año de Publicación</th>
-                        <th>Estado</th>
+                        <th>Nickname</th>
+                        <th>Nacionaldad</th>
+                        <th>Fecha de Nacimiento</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tBody>
-                        @foreach ($books as $book)
+                        @foreach ($authors as $author)
                             <tr>
-                                <td>{{ $book->name }}</td>
-                                <td>
-                                    @foreach ($book->authors as $item)
-                                        {{ $item->name }}<br>
-                                    @endforeach
-                                </td>
-                                <td>{{ $book->editorial->name }}</td>
-                                <td>{{ $book->yearPublication }}</td>
-                                <td>
-                                    @if ($book->status==1)
-                                        <span class="badge bg-danger">No publicado</span>
-                                    @else
-                                        <span class="badge bg-success">Publicado</span>
-                                    @endif
-                                </td>
+                                <td>{{ $author->name }}</td>
+                                <td>{{ $author->nickName }}</td>
+                                <td>{{ $author->nationality }}</td>
+                                <td>{{ $author->yearBirth }}</td>
                                 <td >
-                                    <div class="d-flex align-items-center col-actions" >
-                                        <a href="{{route('books.edit',$book->id)}}" class="btn btn-xs btn-warning text-primary mx-1 shadow" title="Edit">
+                                    <div class="align-items-center col-actions" >
+                                        <a href="{{route('authors.edit',$author->id)}}" class="btn btn-xs btn-warning text-primary mx-1 shadow" title="Edit">
                                             <i class="fa fa-lg fa-fw fa-pencil"></i>
                                         </a>
-                                        <form action="{{route('books.destroy' ,$book->id)}}" method="POST">
+                                        <form action="{{route('authors.destroy', $author->id)}}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-xs btn-danger text-primary mx-1 shadow bg-danger">
@@ -76,10 +62,9 @@
                 <tfoot>
                     <tr>
                         <th>Nombre</th>
-                        <th>Autor</th>
-                        <th>Editorial</th>
-                        <th>Año de Publicación</th>
-                        <th>Estado</th>
+                        <th>Nickname</th>
+                        <th>Nacionaldad</th>
+                        <th>Fecha de Nacimiento</th>
                         <th>Acciones</th>
                     </tr>
                     <tr>
@@ -93,7 +78,6 @@
             </table>
         </div>
     </div>
-    
 @endsection
 
 @section('scripComplemet')
@@ -101,4 +85,3 @@
     <script src="{{ asset('plugins/fooTable/dist/footable.all.min.js') }}"></script>
     <script src="{{ asset('js/demo/tables-footable.js') }}"></script>
 @endsection
-

@@ -17,9 +17,9 @@ class BookController extends Controller
 }
     public function index(){
         
-        $books=Book::all();
-        //dd($books->authors);
-       // $roles=Book::find(7)->authors()->orderBy('name')->get();
+        $books=Book::with(['authors'])->get();
+        //dd($books);
+        
         //dd($roles);
         return view('admin.book.index',compact('books'));
     }
@@ -29,7 +29,6 @@ class BookController extends Controller
         return view('admin.book.create',compact('editorial','authors'));
     }
     public function store(BookRequest $request){
-       
         $book= Book::create($request->all());
        // dd($book);
     //authors()->where('active', 1)->get();
@@ -47,23 +46,21 @@ class BookController extends Controller
     }
     public function edit(Book $book){
         $editorials=Editorial::all();
-        return view('admin.book.edit',compact('book','editorials'));
+        $author=Book::find($book->id)->authors()->get();//3
+        $authors=Author::all();//15
+        return view('admin.book.edit',compact('book','editorials','authors','author'));
     }
     public function update(BookRequest $request,Book $book){
+        /**################# NO FUNCIONA ################### */
+        /**################################################# */
         //dd($request->all());
-        $book=book::findOrfail($book->id);
-        $book->update($request->all()); 
-
-        /*
-         if($request->tags){
-           en caso de no funcionar el request->tags utilizar --> $request->input('author_id',[])
-            Post::find($id)->tags()->sync($request->tags);
-           
-        }
-        **/
-
-
-        return redirect()->route('books.index')->with('update','Se actualizo el registro');
+        //$book=book::findOrfail($book->id);
+        //dd($book->authors);
+        //en caso de no funcionar el request->tags utilizar --> $request->input('author_id',[])
+        //Book::findOrfail($book)->$book->authors->sync($request->input('author_id',[]));
+        //$book->authors()->attach($request->input('author_id',[]));
+        //$book->update($request->all()); 
+        //return redirect()->route('books.index')->with('update','Se actualizo el registro');
     }
     public function destroy(Book $book){
         $book->delete();

@@ -3,7 +3,7 @@
 @endsection
     <link href="{{ asset('plugins/fooTable/css/footable.core.css') }}" rel="stylesheet">
 @section('contentPrincipal')
-    @include('admin.editorial.alert')
+    @include('admin.template.alert')
     <div class="panel">
         <div class="panel-body">
             <div class="pad-btm form-inline">
