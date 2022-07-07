@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\BookRequest;
+use App\Models\Admin\Author;
 use App\Models\Admin\Book;
 use App\Models\Admin\Editorial;
 use Illuminate\Http\Request;
@@ -19,11 +20,15 @@ class BookController extends Controller
         return view('admin.book.index',compact('books'));
     }
     public function create(){
+        $authors=Author::all();
         $editorial=Editorial::all();
-        return view('admin.book.create',compact('editorial'));
+        return view('admin.book.create',compact('editorial','authors'));
     }
     public function store(BookRequest $request){
-        Book::create($request->all());
+        dd($request->all());
+        $book= Book::create($request->all());
+        $book->authors()->attach($request->authors);
+        
         return redirect()->route('books.index')->with('success','Libro agregado correctamente');
     }
     public function edit(Book $book){

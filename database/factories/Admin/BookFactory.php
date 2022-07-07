@@ -16,7 +16,6 @@ class BookFactory extends Factory
     {
         return [
             'name'=>$this->faker->sentence(),
-            'author'=>$this->faker->name(),
             'editorial_id'=>Editorial::all()->random()->id,
             'yearPublication'=>$this->faker->date(),
             'status'=>$this->faker->numberBetween(1,2)
